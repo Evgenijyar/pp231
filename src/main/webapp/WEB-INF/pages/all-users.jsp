@@ -59,7 +59,10 @@
         </tr>
     </table>
     <br>
-    <input type="submit" value="OK">
+    <c:choose>
+        <c:when test="${user.id=='0'}"> <input type="submit" value="Add user"> </c:when>
+        <c:otherwise> <input type="submit" value="Update user"> </c:otherwise>
+    </c:choose>
 </form:form>
 </body>
 </html>
